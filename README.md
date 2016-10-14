@@ -6,3 +6,8 @@ This is a html-base chatting app that has various features for communivation res
   - Make sure [Node.js is installed](https://nodejs.org/en/) on your computer;
   - Do `npm install express --save` (npm should come with Node.js) in your terminal to have the framework express installed;
   - Do `npm install socket.io --save ` to have socket.io installed;
+- TODO:
+  - m - m connection
+  - export log file in .csv
+  - UI design
+  - intalling on lab comps
