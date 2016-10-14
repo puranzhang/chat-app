@@ -1,7 +1,8 @@
-# chat-example
+## chat-app
 
-This is the source code for a very simple chat example used for 
-the [Getting Started](http://socket.io/get-started/chat/) guide 
-of the Socket.IO website.
+This is a html-base chatting app that has various features for communivation researches. It is mainly powered by [socket.io](http://socket.io) and [Node.js](https://nodejs.org/en/). Please follow the instructions to set up experiment computers (assuming mac for developments, any other platforms should be compatible with client end).
 
-Please refer to it to learn how to run this application.
+- For server end
+  - Make sure [Node.js is installed](https://nodejs.org/en/) on your computer;
+  - Do `npm install express --save` (npm should come with Node.js) in your terminal to have the framework express installed;
+  - Do `npm install socket.io --save ` to have socket.io installed;
