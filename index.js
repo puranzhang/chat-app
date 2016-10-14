@@ -8,6 +8,8 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
+    //print timestamp and message on consle
+    console.log(new Date() + ' message: ' + msg);
     io.emit('chat message', msg);
   });
 });
