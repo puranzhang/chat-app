@@ -6,7 +6,7 @@ var fs = require('fs');
 //this string store timestamp and msg
 var msgData = 'time, msg \n';
 //specify output .csv file directory
-var PATH = 'data.csv';
+var PATH = '../data.csv';
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
