@@ -13,4 +13,6 @@ This is a html-base chatting app that has various features for communivation res
   - [ ] m - m connection
   - [x] export log file in .csv
   - [ ] UI design
-  - [ ] intalling on lab comps
+  - [x] intalling on lab comps
+  - [ ] "is typing" cues
+  - [ ] log msg data with senders' name
