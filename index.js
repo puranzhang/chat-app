@@ -1,4 +1,5 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
@@ -7,6 +8,9 @@ var fs = require('fs');
 var msgData = 'time, msg \n';
 //specify output .csv file directory
 var PATH = '../data.csv';
+
+//include .js files in client directory
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
@@ -26,7 +30,23 @@ io.on('connection', function(socket){
         });
 
         io.emit('chat message', msg);
+        //console.log(msg);
     });
+
+    // when the client emits 'typing', we broadcast it to others
+    socket.on('typing', function () {
+        socket.broadcast.emit('typing', {
+            username: socket.username
+        });
+    });
+
+    // when the client emits 'stop typing', we broadcast it to others
+    socket.on('stop typing', function () {
+        socket.broadcast.emit('stop typing', {
+            username: socket.username
+        });
+    });
+
 });
 
 http.listen(3000, function(){

@@ -10,7 +10,7 @@ This is a html-base chatting app that has various features for communivation res
   - Do `npm install socket.io --save ` to have socket.io installed;​
 
 - TODO:
-  - [ ] m - m connection
+  - [x] m - m connection
   - [x] export log file in .csv
   - [ ] UI design
   - [x] intalling on lab comps
