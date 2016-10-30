@@ -30,7 +30,6 @@ io.on('connection', function(socket){
         });
 
         io.emit('chat message', msg);
-        //console.log(msg);
     });
 
     // when the client emits 'typing', we broadcast it to others
