@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 
 var fs = require('fs');
 //this string store timestamp and msg
-var msgData = 'time, username, msg \n';
+var msgData = 'time,username,msg\n';
 //specify output .csv file directory
 var PATH = '../data.csv';
 
@@ -28,7 +28,7 @@ io.on('connection', function (socket) {
     // when the client emits 'new message', this listens and executes
     socket.on('new message', function (data, username) {
         //append timestamp and msg to string
-        msgData += new Date() + ', ' + username + ', ' + '"' + data + '"' + '\n';
+        msgData += new Date() + ',' + username + ',' + '"' + data + '"' + '\n';
 
         //write output .csv file
         fs.writeFile(PATH, msgData, function (err) {
