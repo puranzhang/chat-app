@@ -28,7 +28,7 @@ io.on('connection', function (socket) {
     // when the client emits 'new message', this listens and executes
     socket.on('new message', function (data, username) {
         //append timestamp and msg to string
-        msgData += new Date() + ', ' + username + ', ' + data + '\n';
+        msgData += new Date() + ', ' + username + ', ' + '"' + data + '"' + '\n';
 
         //write output .csv file
         fs.writeFile(PATH, msgData, function (err) {
