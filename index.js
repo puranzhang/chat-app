@@ -1,35 +1,64 @@
+// Setup basic express server
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+var port = process.env.PORT || 3000;
 
 var fs = require('fs');
 //this string store timestamp and msg
-var msgData = 'time, msg \n';
+var msgData = 'time, username, msg \n';
 //specify output .csv file directory
 var PATH = '../data.csv';
 
-//include .js files in client directory
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
+server.listen(port, function () {
+    console.log('Server listening at port %d', port);
 });
 
-io.on('connection', function(socket){
-    console.log('a user connected');
+// Routing
+app.use(express.static(__dirname + '/public'));
 
-    socket.on('chat message', function(msg){
+// Chatroom
+
+// var numUsers = 0;
+
+io.on('connection', function (socket) {
+    var addedUser = false;
+
+    // when the client emits 'new message', this listens and executes
+    socket.on('new message', function (data, username) {
         //append timestamp and msg to string
-        msgData += new Date() + ', ' + msg + '\n';
+        msgData += new Date() + ', ' + username + ', ' + data + '\n';
 
         //write output .csv file
-      	fs.writeFile(PATH, msgData, function (err) {
+        fs.writeFile(PATH, msgData, function (err) {
             if (err) return console.log(err);
-            //console.log('Done!');
+        //console.log('Done!');
         });
 
-        io.emit('chat message', msg);
+        // we tell the client to execute 'new message'
+        socket.broadcast.emit('new message', {
+            username: socket.username,
+            message: data
+        });
+    });
+
+    // when the client emits 'add user', this listens and executes
+    socket.on('add user', function (username) {
+        if (addedUser) return;
+
+        // we store the username in the socket session for this client
+        socket.username = username;
+        //++numUsers;
+        addedUser = true;
+        socket.emit('login', {
+            //numUsers: numUsers
+        });
+        // echo globally (all clients) that a person has connected
+        socket.broadcast.emit('user joined', {
+            username: socket.username,
+            //numUsers: numUsers
+        });
     });
 
     // when the client emits 'typing', we broadcast it to others
@@ -46,8 +75,16 @@ io.on('connection', function(socket){
         });
     });
 
-});
+    // when the user disconnects.. perform this
+    socket.on('disconnect', function () {
+        if (addedUser) {
+            //--numUsers;
 
-http.listen(3000, function(){
-    console.log('listening on *:' + '3000');
+            // echo globally that this client has left
+            socket.broadcast.emit('user left', {
+                username: socket.username,
+                //numUsers: numUsers
+            });
+        }
+    });
 });

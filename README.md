@@ -15,4 +15,4 @@ This is a html-base chatting app that has various features for communivation res
   - [ ] UI design
   - [x] installing on lab comps
   - [ ] "is typing" cues
-  - [ ] log msg data with senders' name
+  - [x] log msg data with senders' name

@@ -1,9 +1,11 @@
 {
-  "name": "socket-chat-example",
-  "version": "0.0.1",
-  "description": "my first socket.io app",
+  "name": "chat",
+  "version": "0.0.0",
+  "description": "A web-based chat app within the scope of MPS project",
+  "main": "index.js",
+  "author": "Puran Zhang",
   "dependencies": {
-    "express": "4.10.2",
+    "express": "4.13.4",
     "socket.io": "1.2.0"
   }
 }
