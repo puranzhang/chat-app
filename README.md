@@ -12,7 +12,10 @@ This is a html-base chatting app that has various features for communivation res
 - TODO:
   - [x] m - m connection
   - [x] export log file in .csv
-  - [ ] UI design
+  - [x] UI design
   - [x] installing on lab comps
-  - [ ] "is typing" cues
   - [x] log msg data with senders' name
+  - [ ] mobile friendly design
+  - [ ] instructions for experimenters
+  - [ ] "is typing" cues on title
+  - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
