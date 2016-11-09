@@ -4,42 +4,28 @@ This is a html-base chatting app that has various features for communivation res
 
 - Installing on server end
   - Make sure [Node.js is installed](https://nodejs.org/en/) on your computer;
-
   - Do `npm install express --save` (npm should come with Node.js) in your terminal to have the framework express installed;
-
   - Do `npm install socket.io --save ` to have socket.io installed;
 
-    ​
-
 - Running on server end
-
   - Open the application **open chat** (script available [here](https://github.com/puranzhang/chat-app/blob/master/open%20chat.scpt)) in the folder that displays your IP address (server's IP) and run the server automatically;
   - In this case, **Terminal** will be launched with your IP address on the first line (after the command) and a message `Server listening at port 3000` on the second line that indicates a successful server setup;
   - Remain this window open until the experiment is finished. When finished, open the application **shutdown chat** (script available [here](https://github.com/puranzhang/chat-app/blob/master/shutdown%20chat.scpt)) to close the server;
   - Log file will be generated as `data.csv` in the folder;
 
-  ​
-
 - Runing on client end
-
   - Open a blank web page with any browser;
-
   - Point the browser to the server IP address (plus `:3000` to the port) by typing, for example, `10.123.1.321:3000` in address bar;
-
   - The welcome/ID input page should pop up;
-
     ​
 
-- Runing on server end (with details)
-
-  - Open Terminal (built-in application on mac) on the server machine;
-  - Change directory (e.g. `cd /Users/Desktop/chat-app` ) to where the ''chat app'' is;
-  - Run the server by typing `node index` in terminal;
-  - You should see `Server listening at port 3000` in the console (terminal), indicating the server is online;
-  - Open `System Preferences/Network` to note the IP address of the server;
-
-  ​
-
+  <!--Runing on server end (with details)-->
+  - <!--Open Terminal (built-in application on mac) on the server machine;-->
+  - <!--Change directory (e.g. `cd /Users/Desktop/chat-app` ) to where the ''chat app'' is;-->
+  - <!--Run the server by typing `node index` in terminal;-->
+  - <!--You should see `Server listening at port 3000` in the console (terminal), indicating the server is online;-->
+  - <!--Open `System Preferences/Network` to note the IP address of the server;-->
+    ​
 - TODO:
   - [x] m - m connection
   - [x] export log file in .csv
@@ -47,5 +33,5 @@ This is a html-base chatting app that has various features for communivation res
   - [x] installing on lab comps
   - [x] log msg data with senders' name
   - [ ] mobile friendly design
-  - [ ] instructions for experimenters
+  - [x] instructions for experimenters
   - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
