@@ -11,7 +11,7 @@ This is a html-base chatting app that has various features for communivation res
   - Open the application **open chat** (script available [here](https://github.com/puranzhang/chat-app/blob/master/automated%20tool/open%20chat.scpt)) in the folder that displays your IP address (server's IP) and run the server automatically;
   - In this case, **Terminal** will be launched with your IP address on the first line (after the command) and a message `Server listening at port 3000` on the second line that indicates a successful server setup;
   - Remain this window open until the experiment is finished. When finished, open the application **stop chat** (script available [here](https://github.com/puranzhang/chat-app/blob/master/automated%20tool/stop%20chat.scpt)) to close the server;
-  - Log file will be generated as `data.csv` in the folder;
+  - Log file will be generated as `data.csv` in the folder (you should save the file somewhere else after each experiment since it's going to be overwritten once you restart the server);
 
 - Runing on client end
   - Open a blank web page with any browser;
@@ -25,6 +25,6 @@ This is a html-base chatting app that has various features for communivation res
   - [x] UI design
   - [x] installing on lab comps
   - [x] log msg data with senders' name
-  - [ ] mobile friendly design
+  - [ ] start displaying msg from bottom
   - [x] instructions for experimenters
   - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
