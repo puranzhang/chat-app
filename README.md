@@ -18,14 +18,6 @@ This is a html-base chatting app that has various features for communivation res
   - Point the browser to the server IP address (plus `:3000` to the port) by typing, for example, `10.123.1.321:3000` in address bar;
   - The welcome/ID input page should pop up;
     ​
-
-  <!--Runing on server end (with details)-->
-  - <!--Open Terminal (built-in application on mac) on the server machine;-->
-  - <!--Change directory (e.g. `cd /Users/Desktop/chat-app` ) to where the ''chat app'' is;-->
-  - <!--Run the server by typing `node index` in terminal;-->
-  - <!--You should see `Server listening at port 3000` in the console (terminal), indicating the server is online;-->
-  - <!--Open `System Preferences/Network` to note the IP address of the server;-->
-    ​
 - TODO:
   - [x] m - m connection
   - [x] export log file in .csv
