@@ -2,12 +2,40 @@
 
 This is a html-base chatting app that has various features for communivation researches. It is mainly powered by [socket.io](http://socket.io) and [Node.js](https://nodejs.org/en/). Please follow the instructions to set up experiment computers (assuming mac for developments, any other platforms should be compatible with client end).
 
-- For server end
+- Installing on server end
   - Make sure [Node.js is installed](https://nodejs.org/en/) on your computer;
 
   - Do `npm install express --save` (npm should come with Node.js) in your terminal to have the framework express installed;
 
-  - Do `npm install socket.io --save ` to have socket.io installed;​
+  - Do `npm install socket.io --save ` to have socket.io installed;
+
+    ​
+
+- Running on server end
+
+  - Grab the applescript [here](https://github.com/puranzhang/chat-app/blob/master/open a chat.scpt)
+
+  ​
+
+- Runing on client end
+
+  - Open a blank web page with any browser;
+
+  - Point the browser to the server IP address (plus `:3000` to the port) by typing, for example, `10.123.1.321:3000` in address bar;
+
+  - The welcome/ID input page should pop up;
+
+    ​
+
+- Runing on server end (with details)
+
+  - Open Terminal (built-in application on mac) on the server machine;
+  - Change directory (e.g. `cd /Users/Desktop/chat-app` ) to where the ''chat app'' is;
+  - Run the server by typing `node index` in terminal;
+  - You should see `Server listening at port 3000` in the console (terminal), indicating the server is online;
+  - Open `System Preferences/Network` to note the IP address of the server;
+
+  ​
 
 - TODO:
   - [x] m - m connection
@@ -17,5 +45,4 @@ This is a html-base chatting app that has various features for communivation res
   - [x] log msg data with senders' name
   - [ ] mobile friendly design
   - [ ] instructions for experimenters
-  - [ ] "is typing" cues on title
   - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
