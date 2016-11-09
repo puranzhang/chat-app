@@ -13,7 +13,9 @@ This is a html-base chatting app that has various features for communivation res
 
 - Running on server end
 
-  - Grab the applescript [here](https://github.com/puranzhang/chat-app/blob/master/open a chat.scpt)
+  - Open the application **open chat** (script available [here](https://github.com/puranzhang/chat-app/blob/master/open%20chat.scpt)) in the folder that displays your IP address (server's IP) and run the server automatically;
+  - In this case, **Terminal** will be launched with your IP address on the first line (after the command) and a message `Server listening at port 3000` on the second line that indicates a successful server setup;
+  - Remain this window open until the experiment is finished. When finished, open the application **shutdown chat** (script available [here]()) to close the server;
 
   ​
 
