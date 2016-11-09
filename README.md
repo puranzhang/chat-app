@@ -17,7 +17,8 @@ This is a html-base chatting app that has various features for communivation res
   - Open a blank web page with any browser;
   - Point the browser to the server IP address (plus `:3000` to the port) by typing, for example, `10.123.1.321:3000` in address bar;
   - The welcome/ID input page should pop up;
-    ​
+
+<br></br>
 - TODO:
   - [x] m - m connection
   - [x] export log file in .csv
