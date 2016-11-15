@@ -25,6 +25,6 @@ This is a html-base chatting app that has various features for communivation res
   - [x] UI design
   - [x] installing on lab comps
   - [x] log msg data with senders' name
-  - [ ] start displaying msg from bottom
+  - [x] start displaying msg from bottom
   - [x] instructions for experimenters
   - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
