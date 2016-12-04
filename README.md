@@ -27,4 +27,4 @@ This is a html-base chatting app that has various features for communivation res
   - [x] log msg data with senders' name
   - [x] start displaying msg from bottom
   - [x] instructions for experimenters
-  - [ ] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
+  - [x] "keep talking and nobody explodes" extensions (menu parse helper; modkit to have same bomb for experiment)
