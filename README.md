@@ -1,8 +1,7 @@
 ## chat-app
 
 This is a html-base chatting app that has various features for communivation researches. It is mainly powered by [socket.io](http://socket.io) and [Node.js](https://nodejs.org/en/). Please follow the instructions to set up experiment computers (assuming mac for developments, any other platforms should be compatible with client end).
-<center><img src="/images/chat page.png"></center>
-![chat page](/images/chat page.png style="width:565px; height:365px;")
+<center><img src="/images/chat page.png" style="width:565px; height:365px;"></center>
 
 - Installing on server end
   - Make sure [Node.js is installed](https://nodejs.org/en/) on your computer;
