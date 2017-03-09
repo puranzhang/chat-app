@@ -179,13 +179,17 @@ $(function() {
     // Gets the color of a username through our hash function
     function getUsernameColor (username) {
         // Compute hash code
-        var hash = 7;
-        for (var i = 0; i < username.length; i++) {
-            hash = username.charCodeAt(i) + (hash << 5) - hash;
-        }
+        // var hash = 7;
+        // for (var i = 0; i < username.length; i++) {
+        //    hash = username.charCodeAt(i) + (hash << 5) - hash;
+        // }
         // Calculate color
-        var index = Math.abs(hash % COLORS.length);
-        return COLORS[index];
+        // var index = Math.abs(hash % COLORS.length);
+        // return COLORS[index];
+        if(username.includes("partner")) {
+		return "#ffcc00";
+	}
+	return "#2b90f5";
     }
 
     // Keyboard events
